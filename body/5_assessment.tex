@@ -1,20 +1,55 @@
-\chapter{評価・実験}
-本研究では,提案する視覚エフェクトと振動刺激の提示手法を用いた評価実験を行った.本章では実験内容およびその結果を示す.
+\chapter{実験}
+本章では,提案する視覚エフェクトと振動刺激の提示手法を用いた評価実験を行った.本章では実験内容及びその結果を示す.
 
-評価.実験では,VR上に魔法の杖を表示しそこから数種類の形状の魔法を放ち、それに伴い振動モーターを振動させ,魔法の形状に対して振動パターンがユーザーの没入感にどのような影響を与えるのかを調査する.
+評価実験では,VR上に魔法の杖を表示しそこから特定の形状の魔法を放ち、それに伴いユーザーにさまざまな振動刺激を与える.これにより魔法の形状に対してどのような振動刺激をユーザーに与えることで,ユーザーの魔法体験感を高めることができるのかを調査する.
 
 \section{実験方法}
 本章では作成したシステムを用いた評価実験を行った.
-22歳の男性-名に対して実験を実施した.
+22歳~24歳の男性-名に対して実験を実施した.
 
+\subsection{実験手順}
+本実験の手順を以下に示す.手順の3~5の工程をringfire,explosion,fireの順番にそれぞれ繰り返す.
+
+\begin{enumerate}
+    \item 実験説明
+    \item 実験準備
+    \item 実験前アンケート
+    \item 実験本番
+    \item 実験後アンケート
+\end{enumerate}
+
+\section{評価実験}
+\subsection{実験前アンケート}
+実験を実施する前にアンケートを行う.
+
+まず,被験者に実験で使用する視覚エフェクトの動画を見せる.次に視覚エフェクトを時系列順に6分割し並べた画像を被験者に見せ,それぞれ振動強度がどのように変化しそうであるか,被験者のイメージを手書きでグラフに書いてもらった.
+時系列順の画像の例を\figref{expTime}に,振動強度のグラフを\figref{ank}に示す.
+
+ユーザーが視覚エフェクトに対してどのような振動刺激が与えられるとイメージしているのかを調査する.
+
+\begin{figure}[h]
+\centering
+\includegraphics[clip,width=10cm]{./fig/explosion.png}
+\caption{時系列順の視覚エフェクト}\label{expTime}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[clip,width=10cm]{./fig/ank.png}
+\caption{振動強度のイメージ}\label{ank}
+\end{figure}
+
+\newpage
+
+\subsection{実験}
 被験者はヘッドマウントディスプレイを装着し右手にコントローラーを持つ.実験の様子を\figref{jikken}に示す.
 提示する視覚エフェクトと振動パターンを実験者が選択する.この時被験者に選択したエフェクトを伝えておく.
-視覚エフェクトに対して4パターンの振動刺激を提示した後アンケートを実施する.これを視覚エフェクトごとに繰り返す.
+視覚エフェクトに対して4パターンの振動刺激を提示した後アンケートを実施する.これを視覚エフェクトの種類ごとに繰り返す.
 実験の被験者の視界を\figref{first}に示す.
 
 \begin{figure}[h]
 \centering
-\includegraphics[clip,width=10cm]{./fig/jikken.JPG}
+\includegraphics[clip,width=10cm]{./fig/jikken.png}
 \caption{実験の様子}\label{jikken}
 \end{figure}
 
@@ -25,48 +60,201 @@
 \caption{実験者の視界}\label{first}
 \end{figure}
 
+実験終了後にアンケートを行う.実験終了後アンケートでは視覚エフェクトに対しての振動刺激の一致度を5段階で評価してもらった.システム使用中の没入感やその他気になったことや感想は自由記入形式で回答してもらった.
+
+\newpage
+
+\subsection{結果と考察}
+\subsection{実験前アンケート結果}
+以下に実験前アンケートの結果を示す.
+\ref{inceA}にincenerationについてのアンケート結果を示す.
+被験者ほぼ全員がincenerationの振動について,一定であると回答した.
+振動パターン1に近い結果になった.
+\begin{figure}[h]
+\centering
+\includegraphics[clip,width=10cm]{fig/incenerationAve.png}
+\caption{アンケ結果(inceneration)}\label{inceA}
+\end{figure}
+
+
+\ref{ringA}にring-fireについてのアンケート結果を示す.
+２枚目までは小さい振動が続き,３枚目で大きな振動になり,残りは余韻といったイメージであることが分かる.
+振動パターン2に近い結果になった.
+\begin{figure}[h]
+\centering
+\includegraphics[clip,width=10cm]{fig/ringfireAve.png}
+\caption{アンケ結果(ring-fire)}\label{ringA}
+\end{figure}
 
 
 
-\subsection{実験手順}
-本実験の手順を以下に示す.この工程をringfire,explosion,fireの順番に3種類ずつ繰り返す.
-\begin{enumerate}
-    \item 実験説明
-    \item 実験準備
-    \item 実験前アンケート
-    \item 実験本番
-    \item 実験後アンケート
-\end{enumerate}
+\ref{mainA}inceneratonについてのアンケート結果を示す.
+ring-fireと比較して初めから強い振動があり,残りが余韻といったイメージであることが分かる.
+振動パターン3に近い結果になった.
+\begin{figure}[h]
+\centering
+\includegraphics[clip,width=10cm]{fig/mainbeamAve.png}
+\caption{アンケ結果(main-beam)}\label{mainA}
+\end{figure}
 
+\newpage
 
+\section{実験後アンケート結果}
+アンケート結果の五段階評価の平均を求める
 
+平均＝(評価の数値×人数)のパターン1からパターン4までの合計÷被験者数
 
+以下にinceneration体験後のアンケートを示す.
 
+\begin{figure}[h]
+    \begin{tabular}{cc}
+      \begin{minipage}[t]{0.45\hsize}
+        \centering
+        \includegraphics[keepaspectratio, scale=0.5]{fig/inceneration1.png}
+        \caption{パターン1(inceneration)}
+        \label{composite}
+      \end{minipage} &
+      \begin{minipage}[t]{0.45\hsize}
+        \centering
+        \includegraphics[keepaspectratio, scale=0.5]{fig/inceneration2.png}
+        \caption{パターン2(inceneration)}
+        \label{Gradation}
+      \end{minipage} \\
+   
+      \begin{minipage}[t]{0.45\hsize}
+        \centering
+        \includegraphics[keepaspectratio, scale=0.5]{fig/inceneration3.png}
+        \caption{パターン3(inceneration)}
+        \label{fill}
+      \end{minipage} &
+      \begin{minipage}[t]{0.45\hsize}
+        \centering
+        \includegraphics[keepaspectratio, scale=0.5]{fig/inceneration4.png}
+        \caption{パターン4(inceneration)}
+        \label{transform}
+      \end{minipage} 
+    \end{tabular}
+  \end{figure}
 
-\begin{table}[htbp]
+平均値を\ref{tab;inceAve}に示す.これよりパターン1とパターン4の評価が高いことが分かる.
+実験前アンケートと比較すると,実験者のイメージと同じ振動刺激を与えると没入感が高まることが分かる.
+\begin{table}[h]
+    \caption{\label{tab;inceAve}平均値(inceneration)}
     \centering
-    \caption{実験終了後アンケート}
-    \label{tab:後}
-    {\renewcommand\arraystretch{1.2}}
     \begin{tabular}{l|l}
-        \hline \hline
-        問1 & あなたはこのシステムにどの程度関心を持ちましたか?\\
-         問2 & どの程度システムに集中できましたか?\\
-         問3 & どの程度システムに夢中になれましたか?\\
-         問4 & システム使用中にどのくらい現実のことを意識し手いましたか?\\
-         問5 & どの程度システム環境とインタラクションで来ていると感じましたか?\\
-         問6 & 視覚エフェクトと振動刺激はどの程度一致していると感じましたか?\\
-         問7 & 実際に自分が魔法を放っている感覚になりましたか?\\
-         \hline
-         
+    \hline
+    \hline
+    パターン1 & 4\\
+    パターン2 & 2.125\\
+    パターン3 & 3\\
+    パターン4 & 3.625\\
+    \hline
     \end{tabular}
 \end{table}
 
-\section{アンケート}
-実験実施前と実施後にアンケートを行う.
-実験前アンケートでは、まずこれから体験してもらう視覚エフェクトを見せ,用意した振動パターンのグラフから最もイメージに合うものを選択してもらった.
+\newpage
 
-実験終了後にアンケートを行う.実験終了後アンケートを\ref{tab:後}に示す.実験終了後アンケートではシステムに没入できているか,振動刺激と視覚エフェクトが一致していたかなどこのデバイスの有用性を調査するために7項目の質問を5段階評価のアンケートを実施する.また,質問項目にない意見やシステムを使用した感想などは自由記述で回答させる.
+以下にring-fire体験後のアンケートを示す.
 
-\subsection{結果}
-\subsection{考察}
+  \begin{figure}[h]
+    \begin{tabular}{cc}
+      \begin{minipage}[t]{0.45\hsize}
+        \centering
+        \includegraphics[keepaspectratio, scale=0.5]{fig/ringfire1.png}
+        \caption{パターン1(ring-fire)}
+        \label{composite}
+      \end{minipage} &
+      \begin{minipage}[t]{0.45\hsize}
+        \centering
+        \includegraphics[keepaspectratio, scale=0.5]{fig/ringfire2.png}
+        \caption{パターン2(ring-fire)}
+        \label{Gradation}
+      \end{minipage} \\
+   
+      \begin{minipage}[t]{0.45\hsize}
+        \centering
+        \includegraphics[keepaspectratio, scale=0.5]{fig/ringfire3.png}
+        \caption{パターン3(ring-fire)}
+        \label{fill}
+      \end{minipage} &
+      \begin{minipage}[t]{0.45\hsize}
+        \centering
+        \includegraphics[keepaspectratio, scale=0.5]{fig/ringfire4.png}
+        \caption{パターン4(ring-fire)}
+        \label{transform}
+      \end{minipage} 
+    \end{tabular}
+  \end{figure}
+
+平均値を\ref{tab;ringAve}に示す.
+パターン2の平均値が3.875と高くなっている.これは後から爆発が起こるという実験前アンケートの結果と一致していると言える.
+
+\begin{table}[H]
+    \caption{\label{tab;ringAve}平均値(ring-fire)}
+    \centering
+    \begin{tabular}{l|l}
+    \hline
+    \hline
+    パターン1 & 3\\
+    パターン2 & 3.875\\
+    パターン3 & 3\\
+    パターン4 & 1\\
+    \hline
+    \end{tabular}
+\end{table}
+
+\newpage
+以下にmain-beam体験後のアンケート結果を示す.
+
+\begin{figure}[h]
+    \begin{tabular}{cc}
+      \begin{minipage}[t]{0.45\hsize}
+        \centering
+        \includegraphics[keepaspectratio, scale=0.5]{fig/inceneration1.png}
+        \caption{パターン1(main-beam)}
+        \label{composite}
+      \end{minipage} &
+      \begin{minipage}[t]{0.45\hsize}
+        \centering
+        \includegraphics[keepaspectratio, scale=0.5]{fig/inceneration2.png}
+        \caption{パターン2(main-beam)}
+        \label{Gradation}
+      \end{minipage} \\
+   
+      \begin{minipage}[t]{0.45\hsize}
+        \centering
+        \includegraphics[keepaspectratio, scale=0.5]{fig/inceneration3.png}
+        \caption{パターン3(main-beam)}
+        \label{fill}
+      \end{minipage} &
+      \begin{minipage}[t]{0.45\hsize}
+        \centering
+        \includegraphics[keepaspectratio, scale=0.5]{fig/inceneration4.png}
+        \caption{パターン4(main-beam)}
+        \label{transform}
+      \end{minipage} 
+    \end{tabular}
+  \end{figure}
+
+平均値を\ref{tab;mainAve}に示す.
+パターン1とパターン3の評価が高くなっている.実験前アンケートの初めに大きい振動が来てその後余韻が残るという結果に沿っている.
+
+  \begin{table}[H]
+    \caption{\label{tab;mainAve}平均値(main-beam)}
+    \centering
+    \begin{tabular}{l|l}
+    \hline
+    \hline
+    パターン1 & 3.75\\
+    パターン2 & 3\\
+    パターン3 & 3.75\\
+    パターン4 & 2.375\\
+    \hline
+    \end{tabular}
+\end{table}
+
+事前アンケートの結果と同じような波形の振動パターンの評価が高くなる傾向にあった.
+
+視覚エフェクトが大きくなるタイミングで振動も大きくなると視覚エフェクトと振動刺激が一致していると感じる傾向にある.
+
+

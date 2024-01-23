@@ -3,11 +3,7 @@
 
 
 
-\begin{figure}[b]
-\centering
-\includegraphics[clip,width=9cm]{./fig/allsystem.png}
-\caption{システム概要}\label{allsystem}
-\end{figure}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{comment}
@@ -22,40 +18,67 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{システム概要}
 \figref{allsystem}に本システムの概要を示す.
-
-本研究ではユーザーがヘッドマウントディスプレイを装着した上で,視覚エフェクトと振動刺激を体験してもらう.
-
-本システムは視覚エフェクトと振動パターンは実験者が変更する.
-
-
-
-
-
-\section{魔法の形状と振動パターンの選定}
-実装する視覚エフェクトは、形状が異なりユーザーに与えられる振動刺激が異なるであろう3種類の視覚エフェクトを選定した.
-以下に選定した3種類の視覚エフェクトを示す.
-
 \begin{figure}[h]
 \centering
-\includegraphics[clip,width=10cm]{./fig/firefire.png}
-\caption{火}\label{fire}
+\includegraphics[clip,width=9cm]{./fig/allsystem.png}
+\caption{システム概要}\label{allsystem}
 \end{figure}
 
-\begin{figure}[h]
-\centering
-\includegraphics[clip,width=10cm]{./fig/explosion.png}
-\caption{爆発}\label{explosion}
-\end{figure}
+本研究では被験者が右手にコントローラーを持った状態でヘッドマウントディスプレイを装着する.被験者がコントローラに装着されている押しボタンを押すことで視覚エフェクトと振動刺激が被験者に提示される.提示する視覚エフェクトと振動刺激は実験者がPCから決定する.
 
-\begin{figure}[h]
-\centering
-\includegraphics[clip,width=10cm]{./fig/ringfire.png}
-\caption{円焔}\label{ringfire}
-\end{figure}
+\section{振動提示手法}
+本研究では,振動提示の方法として振動モーターを使用した.振動子をガムテープで木の角材に固定する.被験者がこの角材を把持することによって角材を媒体とし被験者の手に伝わることで振動を提示できるようにした.
+
 
 \newpage
 
-振動パターンについては、
+\section{魔法エフェクトの選定}
+実装する視覚エフェクトは、形状が異なりユーザーに与えられる振動刺激が異なると思われる3種類の視覚エフェクトを選定した.
+
+以下に選定した3種類の視覚エフェクトを示す.
+
+incenerationは火が燃え続けるエフェクトである.main-beamは最初に大きな爆発があり,その後爆発の余韻が残るエフェクトである.ring-fireは初めはエネルギーをためるフェーズがあり,その後ためたエネルギーを一気に解放するエフェクトである.
+
+\begin{figure}[h]
+\centering
+\includegraphics[clip,width=6.5cm]{./fig/firefire.png}
+\caption{inceneration}\label{fire}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[clip,width=6.5cm]{./fig/explosion.png}
+\caption{main-beam}\label{explosion}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[clip,width=6.5cm]{./fig/ringfire.png}
+\caption{ring-fire}\label{ringfire}
+\end{figure}
+
+
+\newpage
+\subsection{振動パターンの選定}
+以下に選定した4種類の振動パターンを示す.振動強度が一定,弱から強,強から弱,矩形波の4種類である.
+それぞれ順にパターン1,パターン2,パターン3,パターン4とする.
+
+矩形波とは,波形を時間領域で見たときに方形状を持つ波のことである.振動が一定間隔で高低2つの一定値を繰り返す.本研究では低い振動を振動させないようにしている.そのため一定期間で振動子が動いたり止まったりを繰り返す挙動をとる.
+
+\begin{table}[H]
+    \caption{\label{tab;sindou}振動パターンと内容}
+    \centering
+    \begin{tabular}{l|l}
+    \hline
+    \hline
+    パターン1 & 一定\\
+    パターン2 & 弱→強\\
+    パターン3 & 強→弱\\
+    パターン4 &  矩形波\\
+    \hline
+    \end{tabular}
+\end{table}
+
 
 \begin{figure}[h]
 \centering
@@ -74,4 +97,11 @@
 \includegraphics[clip,width=10cm]{./fig/patarn3.png}
 \caption{パターン3}\label{patarn3}
 \end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[clip,width=10cm]{./fig/patarn4.png}
+\caption{パターン4}\label{patarn4}
+\end{figure}
+
 
