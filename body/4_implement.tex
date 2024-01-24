@@ -30,9 +30,8 @@ Arduinoが信号を受信するとモータードライバに信号を送り振�
 
 %----------------------------------------------------------------------------------------------
 
-\subsection{ソフトウェア}
-本研究ではUnityを用いてシステムを開発した.
-に使用したOSを\tabref{tab;software}に示す．
+\subsection{ソフトウェアシステム構成}
+本研究のシステムに使用したソフトウェアの構成を\tabref{tab;software}に示す．
 
 \begin{table}[H]
     \caption{\label{tab;software}ソフトウェア実装環境}
@@ -49,10 +48,10 @@ Arduinoが信号を受信するとモータードライバに信号を送り振�
 
 \subsection{視覚エフェクトと振動刺激提示の連動}
 前述したコントローラーに装着されている押しボタンを押すとArduinoに信号が送られる.
-その信号を受け取ったArduinoからモータードライバとunityに信号を送信することで視覚エフェクトと振動刺激の提示を連動させている．
+その信号を受け取ったArduinoからモータードライバとUnityに信号を送信することで視覚エフェクトと振動刺激の提示を連動させている．
 
 \subsection{Unity}
-\ref{virtualworld}に開発した仮想世界を示す．
+\figref{virtualworld}に開発した仮想世界を示す．
 
 仮想世界には魔法の杖と足場がある.魔法の杖は現実空間のコントローラーの動きと同期している.
 コントローラーのボタンを押すと仮想空間上に視覚エフェクトが表示される.
@@ -61,5 +60,5 @@ Arduinoが信号を受信するとモータードライバに信号を送り振�
 \begin{figure}[h]
 \centering
 \includegraphics[clip,width=10cm]{fig/unity.png}
-\caption{仮想空間}\label{virtualworld}
+\caption{仮想世界}\label{virtualworld}
 \end{figure}

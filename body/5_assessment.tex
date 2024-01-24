@@ -10,13 +10,15 @@
 22歳~24歳の男性-名に対して実験を実施した．
 
 \subsection{実験手順}
-本実験の手順を以下に示す.手順の3~5の工程をringfire,explosion,fireの順番にそれぞれ繰り返す．
+本実験の手順を以下に示す．
+手順の2$\sim$4の工程をinceneration，ring-fire，main-beamの順番にそれぞれ繰り返す．
+被験者は振動を体験してもらった後，アンケートに回答してもらうので振動パターンを覚えておく必要がある．
+その旨を実験説明の段階で被験者に伝える．
 
 \begin{enumerate}
     \item 実験説明
-    \item 実験準備
     \item 実験前アンケート
-    \item 実験本番
+    \item 実験
     \item 実験後アンケート
 \end{enumerate}
 
@@ -27,7 +29,7 @@
 まず,被験者に実験で使用する視覚エフェクトの動画を見せる.
 次に視覚エフェクトを時系列順に6分割し並べた画像を被験者に見せる．
 それぞれ振動強度がどのように変化しそうであるか,被験者のイメージを手書きでグラフに書いてもらった.
-時系列順の画像の例を\figref{expTime}に,振動強度のグラフを\figref{ank}に示す．
+振動強度のグラフを\figref{ank}に示す．
 
 ユーザーが視覚エフェクトに対してどのような振動刺激が与えられるとイメージしているのかを調査する．
 
@@ -46,7 +48,7 @@
 \newpage
 
 \subsection{実験}
-被験者はヘッドマウントディスプレイを装着し右手にコントローラーを持つ.実験の様子を\figref{jikken}に示す．
+被験者はHMDを装着し右手にコントローラーを持つ.実験の様子を\figref{jikken}に示す．
 提示する視覚エフェクトと振動パターンを実験者が選択する.この時被験者に選択したエフェクトを伝えておく．
 視覚エフェクトに対して4パターンの振動刺激を提示した後アンケートを実施する.これを視覚エフェクトの種類ごとに繰り返す．
 実験の被験者の視界を\figref{first}に示す．
@@ -61,7 +63,7 @@
 \begin{figure}[h]
 \centering
 \includegraphics[clip,width=10cm]{./fig/unity_first.png}
-\caption{実験者の視界}\label{first}
+\caption{被験者の視界}\label{first}
 \end{figure}
 
 実験終了後にアンケートを行う.実験終了後アンケートでは視覚エフェクトに対しての振動刺激の一致度を5段階で評価してもらった.
@@ -69,43 +71,43 @@
 
 \newpage
 
-\subsection{結果と考察}
+\section{結果と考察}
 \subsection{実験前アンケート結果}
 以下に実験前アンケートの結果を示す.
-\ref{inceA}にincenerationについてのアンケート結果を示す.
+\figref{inceA}にincenerationについてのアンケート結果を示す.
 被験者ほぼ全員がincenerationの振動について,一定であると回答した.
 振動パターン1に近い結果となった.
 \begin{figure}[h]
 \centering
 \includegraphics[clip,width=10cm]{fig/incenerationAve.png}
-\caption{アンケ結果(inceneration)}\label{inceA}
+\caption{アンケート結果(inceneration)}\label{inceA}
 \end{figure}
 
 
-\ref{ringA}にring-fireについてのアンケート結果を示す.
-２枚目までは小さい振動が続き,３枚目で大きな振動になり,残りは余韻といったイメージであることが分かる.
+\figref{ringA}にring-fireについてのアンケート結果を示す.
+2枚目までは小さい振動が続き,3枚目で大きな振動になり,残りは余韻といったイメージであることが分かる.
 振動パターン2に近い結果となった.
 \begin{figure}[h]
 \centering
 \includegraphics[clip,width=10cm]{fig/ringfireAve.png}
-\caption{アンケ結果(ring-fire)}\label{ringA}
+\caption{アンケート結果(ring-fire)}\label{ringA}
 \end{figure}
 
 
 
-\ref{mainA}inceneratonについてのアンケート結果を示す.
+\figref{mainA}main-beamについてのアンケート結果を示す.
 ring-fireと比較して初めから強い振動があり,残りは余韻といったイメージであることが分かる.
 振動パターン3に近い結果となった.
 \begin{figure}[h]
 \centering
 \includegraphics[clip,width=10cm]{fig/mainbeamAve.png}
-\caption{アンケ結果(main-beam)}\label{mainA}
+\caption{アンケート結果(main-beam)}\label{mainA}
 \end{figure}
 
 \newpage
 
-\section{実験後アンケート結果}
-アンケート結果の五段階評価の平均を求める．
+\subsection{実験後アンケート結果}
+アンケート結果の5段階評価の平均を求める．
 
 平均＝(評価の数値×人数)のパターン1からパターン4までの合計÷被験者数とする．
 
@@ -144,7 +146,7 @@ ring-fireと比較して初めから強い振動があり,残りは余韻とい�
 平均値を\ref{tab;inceAve}に示す.これよりパターン1とパターン4の評価が高くなっている．
 実験前アンケートと比較すると,実験者のイメージと同じ振動刺激を与えると没入感を高められることが分かる．
 \begin{table}[h]
-    \caption{\label{tab;inceAve}平均値(inceneration)}
+    \caption{平均値(inceneration)}
     \centering
     \begin{tabular}{l|l}
     \hline
@@ -155,6 +157,7 @@ ring-fireと比較して初めから強い振動があり,残りは余韻とい�
     パターン4 & 3.625\\
     \hline
     \end{tabular}
+    \label{tab;inceAve}
 \end{table}
 
 \newpage
@@ -203,7 +206,7 @@ ring-fireと比較して初めから強い振動があり,残りは余韻とい�
     パターン1 & 3\\
     パターン2 & 3.875\\
     パターン3 & 3\\
-    パターン4 & 1\\
+    パターン4 & 1.375\\
     \hline
     \end{tabular}
 \end{table}
