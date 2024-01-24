@@ -33,32 +33,6 @@ VR空間内での座標と方向を取得を取得し，HMDにVR空間を投影�
 振動モーターはユーザーに情報を伝えるほか，触覚フィードバックに使われる．
 電流を流すと偏心重錘が回転することにより振動が発生する．
 
-
-\section{Arduino}
-本研究で使用したArduino UNO R3\cite{arduino}(以下Arduinoとする)を\figref{arduino}に示す．
-Arduino はArduino S.L.Iによって開発・販売されているマイコンである．
-USBを介してPCとの通信が可能であり，本研究ではUnityとのシリアル通信をする．
-
-\begin{figure}[h]
-\centering
-\includegraphics[clip,width=8cm]{./fig/Arduino.png}
-\caption{Arduino UNO R3}\label{arduino}
-\end{figure}
-
-\newpage
-
-\section{モータードライバ}
-
-\begin{figure}[h]
-\centering
-\includegraphics[clip,width=8cm]{./fig/pololuMD01B.png}
-\caption{Pololu MD01B}\label{polo}
-\end{figure}
-
-\figref{polo}にモータードライバを示す.
-モータードライバはArduinoからの制御信号を受け取り，電動モーターを制御する．
-本システムでは，数種類の振動刺激を実装するために使用する．
-
 \section{Unity}
 
 \begin{figure}[h]
@@ -73,6 +47,7 @@ Unity\cite{unity}はUnity Technologies社が開発・販売しているゲーム
 
 Unityの開発画面を\figref{unity}に示す．
 
+\newpage
 \section{スマートフォンにおける多様な振動フィードバックが被験者の印象に与える影響}
 スマートフォンにおける多様な振動フィードバックが被験者の印象に与える影響\cite{smart}の研究を白神らが行った．
 この研究では振動パターンがユーザーに与える印象について焦点を当て，約250通りの振動パターンからユーザーがどのような印象を持ったのかを調査したものである．

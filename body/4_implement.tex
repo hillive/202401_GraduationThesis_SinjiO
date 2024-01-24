@@ -2,21 +2,26 @@
 本章では,本研究の実装環境をハードウェアとソフトウェアに分けて説明する．
 
 \section{ハードウェアシステム構成}
-本システムの構成を\figref{sys}に示す.本システムは主にHMD・VIVEトラッカー・PC・コントローラ―で構成される.被験者はHMDを装着した状態で右手にコントローラーを持つ.
-ベースステーションでコントローラ―に取り付けられたVIVEトラッカーを読みとりPCに情報を送信する.その情報をにしたがい,仮想空間上に魔法の杖を表示しHMDに描画する．
+本システムの構成を\figref{sys}に示す．本システムは主にHMD・VIVEトラッカー・PC・コントローラ―で構成される．
+被験者はHMDを装着した状態で右手にコントローラーを持つ．
+ベースステーションでコントローラ―に取り付けられたVIVEトラッカーを読みとりPCに情報を送信する．
+その情報をにしたがい，仮想空間上に魔法の杖を表示しHMDに描画する．
 
 \begin{figure}[h]
 \centering
-\includegraphics[clip,width=10cm]{fig/systemhard.png}
+\includegraphics[clip,width=14cm]{fig/systemhard.png}
 \caption{システム構成}\label{sys}
 \end{figure}
 
 \newpage
 
-\subsection{コントローラー}
-上記の構成の中で角材・押しボタン・VIVEトラッカーによってコントローラーを構成している.押しボタンを押すことでArduinoに信号を送る.
-Arduinoが信号を受信するとモータードライバに信号を送り振動モーターを回転させ,コントローラ―を振動させる．
-\figref{controller}に本システムのコントローラーを示す．
+\figref{sysP}に電源・Arduino・モータードライバ，\figref{controller}に本システムのコントローラ―を示す．
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[clip,width=12cm]{fig/systemP.png}
+    \caption{システム構成}\label{sysP}
+    \end{figure}
 
 \begin{figure}[h]
 \centering
@@ -24,13 +29,38 @@ Arduinoが信号を受信するとモータードライバに信号を送り振�
 \caption{コントローラー}\label{controller}
 \end{figure}
 
+\subsection{Arduino}
+本研究で使用したArduino UNO R3\cite{arduino}(以下Arduinoとする)を\figref{arduino}に示す．
+Arduino はArduino S.L.Iによって開発・販売されているマイコンである．
+USBを介してPCとの通信が可能であり，本研究ではUnityとのシリアル通信をする．
 
+\begin{figure}[h]
+\centering
+\includegraphics[clip,width=8cm]{./fig/Arduino.png}
+\caption{Arduino UNO R3}\label{arduino}
+\end{figure}
+
+\subsection{モータードライバ}
+
+\begin{figure}[h]
+\centering
+\includegraphics[clip,width=8cm]{./fig/pololuMD01B.png}
+\caption{Pololu MD01B}\label{polo}
+\end{figure}
+
+\figref{polo}にモータードライバを示す.
+モータードライバはArduinoからの制御信号を受け取り，電動モーターを制御する．
+本システムでは，数種類の振動刺激を実装するために使用する．
+
+\subsection{コントローラー}
+\figref{controller}で示したコントローラ―は，角材・押しボタン・VIVEトラッカーによってコントローラーを構成している.押しボタンを押すことでArduinoに信号を送る.
+Arduinoが信号を受信するとモータードライバに信号を送り振動モーターを回転させ,コントローラ―を振動させる．
 
 
 
 %----------------------------------------------------------------------------------------------
-
-\subsection{ソフトウェアシステム構成}
+\newpage
+\section{ソフトウェアシステム構成}
 本研究のシステムに使用したソフトウェアの構成を\tabref{tab;software}に示す．
 
 \begin{table}[H]
