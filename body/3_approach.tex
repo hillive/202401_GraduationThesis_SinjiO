@@ -50,8 +50,8 @@ main-beamを\figref{explosion}に示す．main-beamは最初に大きな爆発�
 \section{振動パターンの選定}
 以下に選定した4種類の振動パターンを示す．
 振動強度が一定，弱$\sim$強，強$\sim$弱，矩形波の4種類である．
-それぞれ順にパターン1パターン2パターン3パターン4とする．
-対応表を\tabref{tab;sindou}に示す．
+それぞれのパターンで提示する振動刺激の時間変化の詳細を\figref{fig;sindouTime}に示す．
+振動刺激の名前と特徴の対応表を\tabref{tab;sindou}に示す．
 
 矩形波とは,波形を時間領域で見たときに方形状を持つ波のことである．
 振動が一定間隔で高低2つの一定値を繰り返す．
@@ -64,6 +64,8 @@ main-beamを\figref{explosion}に示す．main-beamは最初に大きな爆発�
     \begin{tabular}{l|l}
     \hline
     \hline
+    名前 & 振動刺激の特徴 \\
+    \hline
     パターン1 & 一定 \\
     パターン2 & 弱→強 \\
     パターン3 & 強→弱 \\
@@ -74,29 +76,45 @@ main-beamを\figref{explosion}に示す．main-beamは最初に大きな爆発�
 \end{table}
 
 
-\begin{figure}[h]
-\centering
-\includegraphics[clip,width=14cm]{./fig/patarn1.png}
-\caption{パターン1}\label{patarn1}
+\begin{figure}
+  \centering
+
+  \subfigure[パターン1]{\includegraphics[width=0.45\textwidth]{fig/patarn1.png}}
+  \hfill
+  \subfigure[パターン2]{\includegraphics[width=0.45\textwidth]{fig/patarn2.png}}
+
+  \subfigure[パターン3]{\includegraphics[width=0.45\textwidth]{fig/patarn3.png}}
+  \hfill
+  \subfigure[パターン4]{\includegraphics[width=0.45\textwidth]{fig/patarn4.png}}
+
+  \caption{振動強度の時間変化}
+  \label{fig:sindouTime}
 \end{figure}
 
-\begin{figure}[h]
-\centering
-\includegraphics[clip,width=14cm]{./fig/patarn2.png}
-\caption{パターン2}\label{patarn2}
-\end{figure}
 
-\newpage
-\begin{figure}[h]
-\centering
-\includegraphics[clip,width=14cm]{./fig/patarn3.png}
-\caption{パターン3}\label{patarn3}
-\end{figure}
+% \begin{figure}[h]
+% \centering
+% \includegraphics[clip,width=14cm]{./fig/patarn1.png}
+% \caption{パターン1}\label{patarn1}
+% \end{figure}
 
-\begin{figure}[h]
-\centering
-\includegraphics[clip,width=14cm]{./fig/patarn4.png}
-\caption{パターン4}\label{patarn4}
-\end{figure}
+% \begin{figure}[h]
+% \centering
+% \includegraphics[clip,width=14cm]{./fig/patarn2.png}
+% \caption{パターン2}\label{patarn2}
+% \end{figure}
+
+% \newpage
+% \begin{figure}[h]
+% \centering
+% \includegraphics[clip,width=14cm]{./fig/patarn3.png}
+% \caption{パターン3}\label{patarn3}
+% \end{figure}
+
+% \begin{figure}[h]
+% \centering
+% \includegraphics[clip,width=14cm]{./fig/patarn4.png}
+% \caption{パターン4}\label{patarn4}
+% \end{figure}
 
 
